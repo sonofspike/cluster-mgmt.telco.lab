@@ -21,4 +21,4 @@ spec:
       managed: true
     - kind: monitoring
       managed: true
-  configBundleSecret: {{ $.Values.quay.config }}
+  #configBundleSecret: {{ $.Values.quay.config }}
