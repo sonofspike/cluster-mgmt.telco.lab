@@ -48,7 +48,7 @@ spec:
               {{- range $.Values.nodes }}
                 {{- range . }}
                   {{- if eq .ocs "true" }}
-              oc label node {{ .name }}.{{ $.Values.global.name }}.{{ $.Values.global.domain }} cluster.ocs.openshift.io/openshift-storage=''
+              oc label node {{ .name }} cluster.ocs.openshift.io/openshift-storage=''
                   {{- end }}
                 {{- end }}
               {{- end }}

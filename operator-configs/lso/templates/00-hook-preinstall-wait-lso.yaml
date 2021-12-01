@@ -38,10 +38,10 @@ spec:
               {{- range $.Values.nodes }}
                 {{- range . }}
                   {{- if eq .lso "true" }}
-              oc label node {{ .name }}.{{ $.Values.global.name }}.{{ $.Values.global.domain }} ran.openshift.io/lso=''
+              oc label node {{ .name }} ran.openshift.io/lso=''
                   {{- end }}
                 {{- end }}
               {{- end }}
               echo "All done! Hooray!"
-
+ 
 
