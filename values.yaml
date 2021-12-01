@@ -5,7 +5,7 @@ global:
   base_git_url: https://github.com/sonofspike/cluster-mgmt.telco.lab.git
   operator_catalog_name: redhat-operator-index
 #
-  values_global_url: https://github.com/sonofspike/mgmt.telco.lab/raw/main/
+  values_global_url: https://raw.githubusercontent.com/sonofspike/cluster-mgmt.telco.lab/main
 #
   base_ztp_url: https://github.com/sonofspike/openshift-gitops.git
   values_cluster_prefix_url: https://github.com/sonofspike
