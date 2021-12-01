@@ -1,32 +1,26 @@
 global:
-  name: ocpmgmt
-  domain: lab.diktio.net
+  name: mgmt
+  domain: telco.lab
   namespace: assisted-installer
-  # base_git_url: https://github.com/nsatsia/openshift-gitops.git
-  base_git_url: https://github.com/nsatsia/ocpmgmt.lab.diktio.net.git
+  base_git_url: https://github.com/sonofspike/cluster-mgmt.telco.lab.git
   operator_catalog_name: redhat-operator-index
 #
-# Need to rename to values_global_url
+  values_global_url: https://github.com/sonofspike/mgmt.telco.lab/raw/main/
 #
-  values_directory_url: https://github.com/nsatsia/ocpmgmt.lab.diktio.net/raw/main/
-#
-  base_ztp_url: https://github.com/nsatsia/openshift-gitops.git
-  values_cluster_prefix_url: https://github.com/nsatsia
-  api_vip: 192.19.129.21
-  ingress_vip: 192.19.129.22
-  clusternetwork: 10.128.0.0/14
-  default_router: 192.19.129.254
+  base_ztp_url: https://github.com/sonofspike/openshift-gitops.git
+  values_cluster_prefix_url: https://github.com/sonofspike
+  api_vip: 10.198.7.139
+  ingress_vip: 10.198.7.141
+  default_router: 10.198.7.129
   default_storage_class: "ocs-storagecluster-ceph-rbd"
   # default_storage_class: "ocs-external-storagecluster-ceph-rbd"
-  dns: 192.19.128.2
-  imagesetref_name: "openshift-v4.8.19-mirror"
-  pull_secret: pull-secret
-# NEED to remove servernamespace and switch to gitops.namespace on next rebuild of management cluster
-  servernamespace: telco-gitops
+  dns: 10.198.7.130
+  clusternetwork: 10.128.0.0/14
   servicenetwork: 172.30.0.0/16
+  imagesetref_name: "openshift-v4.8.19-mirror"
   pull_secret_name: pull-secret
-  pull_secret: '{"auths":{"lab-registry.ocpmgmt.lab.diktio.net":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"lab-registry.ocpmgmt.lab.diktio.net":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"quay.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"registry.redhat.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"}}}'
-  ssh_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDkn6tx/IfpY1Eb9QVBsr2Q5WHDGSDTbysuW+2OiifkVfrP/0zVjo7pe1bBxUaEID0rWN6CC1VTwS4GX6cZhGr0wlgT8TUN+rHutxL0Tawqy+yTzqYJ+Vfeilz3CfdAt06QJL9sy57RrlsSTIrlU8CijJTght+v57tmWyKDt2mNJL/5WX9PG40mgXqQ+tfFn+cluOc3V+XcK5dx89dS3oD3Wzn/FmTdwKm8+bnZapWBz7YJf3BU5AL+E82vRCIyZ2MnzbjJ33nTgEF/NdKLEPtyp1dT3Lb0mGB8duj0CFtA3u7CwVi/KMp9JdssN3mN8mGtPE+NwYKsbDA1/++jRCqX login'
+  pull_secret: '{"auths":{"lab-registry.mgmt.telco.lab":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"lab-registry.mgmt.telco.lab":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"quay.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"registry.redhat.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"}}}'
+  ssh_key: 'ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJhdxcSrr+m9htw61kpnzV1SK7DycRv/PhZbGpvVk04nsYeJUfmUGT/VG5jj6zFwNjLH0EXPAv68G34PaV8WSmk= telco.lab'
   ca: |-
     -----BEGIN CERTIFICATE-----
     MIIDlDCCAnygAwIBAgIBATANBgkqhkiG9w0BAQsFADA5MRcwFQYDVQQKDA5MQUIu
@@ -50,8 +44,6 @@ global:
     WFBk6T3neXntdKX5ZipQM6qfFbH8DoDdElCvqZkB2bc1AwWaFzYbiEjz0oeowpUw
     tEChGIzF/34=
     -----END CERTIFICATE-----
-# CLUSTER DOMAIN
-# SNO?
 
 gitops:
   namespace: telco-gitops
@@ -69,12 +61,8 @@ lso:
   minsize: 1Gi
 
 mirror:
-  - name: openshift-v4.8.15-mirror
-    path: lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp4815:4.8.15-x86_64
-  - name: openshift-v4.8.17-mirror
-    path: lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp4817:4.8.17-x86_64
   - name: openshift-v4.8.19-mirror
-    path: lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp4819:4.8.19-x86_64
+    path: lab-registry.mgmt.telco.lab/sonofspike/ocp4819:4.8.19-x86_64
 
 quay:
   config: lab-quay-config-bundle
@@ -83,7 +71,7 @@ quay:
 ai: 
   namespace: "assisted-installer"
   service_config_name: "assisted-service-config"
-  registry_url: "lab-registry.ocpmgmt.lab.diktio.net"
+  registry_url: "lab-registry.mgmt.telco.lab"
   registry_user: "nsatsia"
   registry_password: "Redhat01"
   controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:3f96b21f34cd0c0c605df094190d426dc968d2403cbf5888244df0bfac1d1d0a"
@@ -95,14 +83,14 @@ ai:
 
 nodes:
   masters:
-  - name: "master1"
+  - name: "m0"
     lso: "true"
     ocs: "true"
 
-  - name: "master2"
+  - name: "m1"
     lso: "true"
     ocs: "true"
 
-  - name: "master3"
+  - name: "m2"
     lso: "true"
     ocs: "true"

@@ -27,7 +27,7 @@ spec:
         targetRevision: HEAD
         helm:
           valueFiles:
-          - "{{ $.Values.global.values_directory_url }}/values.yaml"
+          - "{{ $.Values.global.values_global_url }}/values.yaml"
           - "{{ $.Values.global.values_cluster_prefix_url }}/{{ "{{" }}path.basename{{ "}}" }}/raw/main/values.yaml"
       syncPolicy:
         automated:
