@@ -1,0 +1,31 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+ name: {{ $.Values.global.name }}-{{ $.Values.global.servernamespace }}-ztp-target-cluster
+ namespace: {{ $.Values.global.servernamespace }}
+spec:
+  generators:
+    - git:
+        repoURL: '{{ $.Values.global.base_ztp_url }}'
+        directories:
+          # - path: {{ $.Values.global.base_git_path }}/{{ $.Values.global.name }}.{{ $.Values.global.domain }}/operator-configs/*
+          - path: clusters/*
+        revision: HEAD
+  template:
+    metadata:
+      name: 'ztp-deploy-{{ "{{" }}path.basename{{ "}}" }}'
+      namespace: {{ $.Values.global.servernamespace }}
+    spec:
+      destination:
+        namespace: {{ $.Values.global.servernamespace }}
+        server: 'https://kubernetes.default.svc'
+      project: default
+      source:
+        repoURL: '{{ $.Values.global.values_cluster_prefix_url }}/{{ "{{" }}path.basename{{ "}}" }}.git'
+        path: ztp/deploy
+        targetRevision: HEAD
+        helm:
+          valueFiles:
+          - "{{ $.Values.global.values_directory_url }}/values.yaml"
+          - "{{ $.Values.global.values_cluster_prefix_url }}/{{ "{{" }}path.basename{{ "}}" }}/raw/main/values.yaml"
