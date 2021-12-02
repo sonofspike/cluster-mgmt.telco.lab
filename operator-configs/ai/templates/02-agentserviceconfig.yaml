@@ -12,13 +12,13 @@ spec:
       - ReadWriteOnce
     resources:
       requests:
-        storage: 40Gi
+        storage: 20Gi
   filesystemStorage:
     accessModes:
       - ReadWriteOnce
     resources:
       requests:
-        storage: 40Gi
+        storage: 20Gi
   mirrorRegistryRef:
     name: mirror-registry-config-map
   osImages:
