@@ -9,14 +9,9 @@ global:
 #
   base_ztp_url: https://github.com/sonofspike/openshift-gitops.git
   values_cluster_prefix_url: https://github.com/sonofspike
-  api_vip: 10.198.7.139
-  ingress_vip: 10.198.7.141
-  default_router: 10.198.7.129
   default_storage_class: "ocs-storagecluster-ceph-rbd"
   # default_storage_class: "ocs-external-storagecluster-ceph-rbd"
   dns: 10.198.7.130
-  clusternetwork: 10.128.0.0/14
-  servicenetwork: 172.30.0.0/16
   imagesetref_name: "openshift-v4.8.19-mirror"
   pull_secret_name: pull-secret
   pull_secret: '{"auths":{"lab-registry.mgmt.telco.lab":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"lab-registry.mgmt.telco.lab":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"quay.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"registry.redhat.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"}}}'
@@ -54,6 +49,7 @@ gitops:
   # hook_image: registry.redhat.io/openshift4/ose-cli:latest
 
 bmh:
+  # wget https://releases-art-rhcos.svc.ci.openshift.org/art/storage/releases/rhcos-4.8/48.84.202106301921-0/x86_64/rhcos-48.84.202106301921-0-openstack.x86_64.qcow2.gz?sha256=5a75df7b4d4dc1861093e520187a133eda3439019f280dc6e2f57edf70eb089d
   prov_os_download_url: http://192.19.130.11:8989/rhcos-48.84.202106301921-0-openstack.x86_64.qcow2.gz?sha256=5a75df7b4d4dc1861093e520187a133eda3439019f280dc6e2f57edf70eb089d
 
 lso:
