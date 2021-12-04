@@ -70,7 +70,7 @@ ai:
   registry_url: "lab-registry.mgmt.telco.lab"
   registry_user: "nsatsia"
   registry_password: "Redhat01"
-  controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:3f96b21f34cd0c0c605df094190d426dc968d2403cbf5888244df0bfac1d1d0a"
+  controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:525e8090f4c12107e6c89b8bae9461098a7d14132d2eebe4c39602348e4293c0"
   os_images:
     osp_version: '4.8'
     rhcos_version: 48.84.202107202156-0
