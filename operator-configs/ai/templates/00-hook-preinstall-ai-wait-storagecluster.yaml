@@ -35,9 +35,9 @@ spec:
                 STORAGE_NAME="ocs-external-storagecluster"
               fi
               CSV_STATUS="Pausing $SLEEP seconds..."
-              while [ "$CSV_STATUS" != "ReconcileCompleted" ]; do
+              while [ "$CSV_STATUS" != "Ready" ]; do
                 echo "Waiting for the OCS Operator to be ready. ($CSV_STATUS)"
                 sleep $SLEEP
-                CSV_STATUS=$( oc get -n openshift-storage StorageCluster $STORAGE_NAME -o jsonpath={..status.conditions[-1:].reason} )
+                CSV_STATUS=$( oc get -n openshift-storage StorageCluster $STORAGE_NAME -o jsonpath={..status.phase} )
               done
               echo "All done! Hooray!"
