@@ -14,30 +14,35 @@ global:
   dns: 10.198.7.130
   imagesetref_name: "openshift-v4.8.19-mirror"
   pull_secret_name: pull-secret
-  pull_secret: '{"auths":{"lab-registry.mgmt.telco.lab":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"lab-registry.mgmt.telco.lab":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"quay.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"},"registry.redhat.io":{"auth":"bnNhdHNpYTpSZWRoYXQwMQ==","email":"nsatsia@redhat.com"}}}'
+  pull_secret: '{"auths":{"lab-registry.mgmt.telco.lab":{"auth":"dGVsY29sYWI6UmVkaGF0MDE=","email":"nsatsia@redhat.com"},"lab-registry.mgmt.telco.lab":{"auth":"dGVsY29sYWI6UmVkaGF0MDE=","email":"nsatsia@redhat.com"},"quay.io":{"auth":"dGVsY29sYWI6UmVkaGF0MDE=","email":"nsatsia@redhat.com"},"registry.redhat.io":{"auth":"dGVsY29sYWI6UmVkaGF0MDE=","email":"nsatsia@redhat.com"}}}'
   ssh_key: 'ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJhdxcSrr+m9htw61kpnzV1SK7DycRv/PhZbGpvVk04nsYeJUfmUGT/VG5jj6zFwNjLH0EXPAv68G34PaV8WSmk= telco.lab'
   ca: |-
     -----BEGIN CERTIFICATE-----
-    MIIDlDCCAnygAwIBAgIBATANBgkqhkiG9w0BAQsFADA5MRcwFQYDVQQKDA5MQUIu
-    RElLVElPLk5FVDEeMBwGA1UEAwwVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MB4XDTE5
-    MDMxMDAzNDM0MloXDTM5MDMxMDAzNDM0MlowOTEXMBUGA1UECgwOTEFCLkRJS1RJ
-    Ty5ORVQxHjAcBgNVBAMMFUNlcnRpZmljYXRlIEF1dGhvcml0eTCCASIwDQYJKoZI
-    hvcNAQEBBQADggEPADCCAQoCggEBAOEatwt8carWOdYsAoh8BSMg5tUZmU+rUe1L
-    fZKN6tA9ytpg4PqWaTRA8eXPfkyzpunf8NXmP1AWSf8LBH5fWUVxzFgmOfyrZroN
-    9sLjf+ueuh+LK7tixL56aUkx0fjQecoBpD5rq4JUemjC1QocpHAVZeYkDlvuoXEq
-    uhwj1/Dla5JI5YlEeD2AzvNNxjM3s23L+wfvPErKzbbamxFKZQPxCyPCom0Vm7hO
-    47WJ6RgVKMlCQGx2zcw8ckS3mj9DJwhHTAcNAdBJyK6AD4PDmk/L7pVYyS6HtCTj
-    NKAeedKqLFFGNvTkGCTBMA0aDwn5D1Ti9nqTG9tDm6a8PBmJWk0CAwEAAaOBpjCB
-    ozAfBgNVHSMEGDAWgBQK1MC5fwTjULrfW5Z4vY82fnGcNjAPBgNVHRMBAf8EBTAD
-    AQH/MA4GA1UdDwEB/wQEAwIBxjAdBgNVHQ4EFgQUCtTAuX8E41C631uWeL2PNn5x
-    nDYwQAYIKwYBBQUHAQEENDAyMDAGCCsGAQUFBzABhiRodHRwOi8vaXBhLWNhLmxh
-    Yi5kaWt0aW8ubmV0L2NhL29jc3AwDQYJKoZIhvcNAQELBQADggEBAIJ4Hd2BjDK1
-    tbeOp0TCmh3V59gaB4RTUQ8eDHKinqzglfWfvg6KsWMAENVRkjBqtEu7YwzMU5jx
-    imV/nV7B6euftOLlg3L6uHJyUyqdsb9e8rN2Lt2Zho4e6i726g9FRCVXMNaQVFA4
-    6rVNmIrAc88NGffiYxa1ANEfkqbD0RZYggxVBeN5l4C5QVZO/XdQLeUvQaFZir+R
-    5ieeL2Zp5BObGec6tWYaAjJwlE5YMQh6IvQQgUfVMGCFrPwdN3KP2jEXW91Dy3rn
-    WFBk6T3neXntdKX5ZipQM6qfFbH8DoDdElCvqZkB2bc1AwWaFzYbiEjz0oeowpUw
-    tEChGIzF/34=
+    MIIEhTCCAu2gAwIBAgIBATANBgkqhkiG9w0BAQsFADA0MRIwEAYDVQQKDAlURUxD
+    Ty5MQUIxHjAcBgNVBAMMFUNlcnRpZmljYXRlIEF1dGhvcml0eTAeFw0yMTEyMDMw
+    MzAwNTFaFw00MTEyMDMwMzAwNTFaMDQxEjAQBgNVBAoMCVRFTENPLkxBQjEeMBwG
+    A1UEAwwVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MIIBojANBgkqhkiG9w0BAQEFAAOC
+    AY8AMIIBigKCAYEA4D4GCc2uGF4CSTml+hZogYVJTwcMXdIs4An/+KEsEfPmTrqQ
+    I+pKbn6CezTc5/to3nd7oCQZbwaOjuc1GmvUkvJmTqBQ3HBTyLaR56Giaa3PvUxU
+    jUgmYTcYu0C9E3KPlRBp6O2Gu0IkLF9XJ4QmclItpzw4fIrjs4gqCJYEFLt0qUyi
+    4SdYCTajkpnUeC9s7mNdUmvkIljzmQQAlqiEjpRLfbcLWTvykgZWNajgy1D1pQi2
+    inkdSzJacAJFlksynyf+L9gQkVLKl12XtVf/ctVv1B5bWCrQ3MFa2TJExc55B3FU
+    zxdwleSFvfAPps64+v+sitIcV12tpDBc8hQt5knKsZih7XznKklIOFqVJiQhDeAs
+    vVJf/ZR/ydzOBL1KWrty2IAoTENmS/GIu4WIqy/t66MSkEOIfKbtncBmO3BIFYcL
+    dcsFNDy2hNj9T/e2q+v8BFopsPd8J1dk9NhMhytYBkwzkx6iLlY45ZdczYGLOw38
+    WILsBVcTH0t2MnMtAgMBAAGjgaEwgZ4wHwYDVR0jBBgwFoAUWf4HDI68lgbMqBLM
+    N64rAKil+PwwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAcYwHQYDVR0O
+    BBYEFFn+BwyOvJYGzKgSzDeuKwCopfj8MDsGCCsGAQUFBwEBBC8wLTArBggrBgEF
+    BQcwAYYfaHR0cDovL2lwYS1jYS50ZWxjby5sYWIvY2Evb2NzcDANBgkqhkiG9w0B
+    AQsFAAOCAYEA1xDeWwGiiBF0W9iQimHhmQGtjJTjknim7uGxPLRT6YQYR2t5rRAl
+    0NIIQoXrZl2rjgwxRoLgl+w+HIa9yywWJ1focQ/xTIjF3vOBeXCrBh7t06glVMnI
+    vGz6DqyLTlwJHSbRIunDaXKMDlP6a3EutzZ+TPJojwXHYdOupm9KNDpsGm0VaksA
+    h0QyELkbiyZWd2n+gRqdZUoIHJ5Ha0zdR4FFP+/9OjK9iRFdkkUlq8MCP5jXJouh
+    iuHKu0bUlr3OBQpUQGH8iuheuNpEzVVzj/MGUsvUJGRRYNwdamEKjjabcAC72xXp
+    aoKAcBLtp+p3mm1GEMProf90jpzV5z4EeoFPPusF+IWSnn/QCZvZMo/bykndh++t
+    TS+ITTIc77JjrNWP3RqfeRfUxMz/5m95dKKRSX60hRHCsR/GD+esfk66iivTbYoj
+    Pv/TFeyfB2+rOpTtYsgWWZEs4lAg6EnZeTNv2/DiqAONXqPgozfMf2lYW3dAvfrI
+    +gulMabIlRlB
     -----END CERTIFICATE-----
 
 gitops:
