@@ -7,6 +7,15 @@ metadata:
     name: assisted-installer
     openshift.io/cluster-monitoring: "true"
 ---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: assisted-service-operator
+  namespace: assisted-installer
+spec:
+  targetNamespaces:
+  - assisted-installer
+---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
