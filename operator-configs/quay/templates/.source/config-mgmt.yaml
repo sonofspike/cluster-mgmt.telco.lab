@@ -11,4 +11,14 @@ TAG_EXPIRATION_OPTIONS:
 - 2w
 TEAM_RESYNC_STALE_TIME: 60m
 TESTING: false
-SERVER_HOSTNAME: lab-registry.ocpmgmt.lab.diktio.net
+SERVER_HOSTNAME: lab-registry.mgmt.telco.lab
+DISTRIBUTED_STORAGE_CONFIG:
+  local_us:
+  - RadosGWStorage
+  - access_key: QRTMVUVN4X9SCZ6T3RCQ
+    bucket_name: mgmt-cluster-bucket
+    hostname: 10.198.7.135
+    is_secure: false
+    port: "80"
+    secret_key: WJBO2ai5xRcndqGe3K9QADeDCOIjQt5Vn834iH3G
+    storage_path: /datastorage/registry
