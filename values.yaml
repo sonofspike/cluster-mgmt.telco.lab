@@ -75,7 +75,7 @@ ai:
   namespace: "assisted-installer"
   service_config_name: "assisted-service-config"
   registry_url: "lab-registry.mgmt.telco.lab"
-  registry_user: "nsatsia"
+  registry_user: "telcolab"
   registry_password: "Redhat01"
   controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:525e8090f4c12107e6c89b8bae9461098a7d14132d2eebe4c39602348e4293c0"
   os_images:
