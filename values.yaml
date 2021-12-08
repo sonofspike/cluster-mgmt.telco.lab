@@ -57,7 +57,7 @@ gitops:
 
 bmh:
   # wget https://releases-art-rhcos.svc.ci.openshift.org/art/storage/releases/rhcos-4.8/48.84.202106301921-0/x86_64/rhcos-48.84.202106301921-0-openstack.x86_64.qcow2.gz?sha256=5a75df7b4d4dc1861093e520187a133eda3439019f280dc6e2f57edf70eb089d
-  prov_os_download_url: http://10.198.7.130:8989/rhcos-48.84.202106301921-0-openstack.x86_64.qcow2.gz?sha256\=5a75df7b4d4dc1861093e520187a133eda3439019f280dc6e2f57edf70eb089d
+  prov_os_download_url: http://10.198.7.130:8989/rhcos-48.84.202106301921-0-openstack.x86_64.qcow2.gz?sha256=5a75df7b4d4dc1861093e520187a133eda3439019f280dc6e2f57edf70eb089d
 
 lso:
   maxdevice: 10
