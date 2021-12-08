@@ -1,6 +1,8 @@
 global:
   name: mgmt
   domain: telco.lab
+# git repo prefix for target cluster, exaple: cluster-ran1.telco.lab
+  cluster_git_prefix: cluster
   namespace: assisted-installer
   base_git_url: https://github.com/sonofspike/cluster-mgmt.telco.lab.git
   operator_catalog_name: redhat-operator-index
