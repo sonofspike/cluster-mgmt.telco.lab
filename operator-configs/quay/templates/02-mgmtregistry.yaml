@@ -23,4 +23,4 @@ spec:
       managed: true
     - kind: tls	
       managed: true      
-  #configBundleSecret: {{ $.Values.quay.config }}
+  configBundleSecret: {{ $.Values.quay.config }}
