@@ -65,7 +65,7 @@ lso:
 
 mirror:
   - name: openshift-v4.8.22-mirror
-    path: lab-registry.mgmt.telco.lab/sonofspike/ocp4822:4.8.22-x86_64
+    path: lab-registry.mgmt.telco.lab/telcolab/ocp4822:4.8.22-x86_64
 
 quay:
   config: lab-quay-config-bundle
