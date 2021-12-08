@@ -9,7 +9,7 @@ global:
 #
   values_global_url: https://raw.githubusercontent.com/sonofspike/cluster-mgmt.telco.lab/main
 #
-  base_ztp_url: https://github.com/sonofspike/openshift-gitops.git
+  base_ztp_url: https://github.com/sonofspike/clusters-openshift-gitops.git
   values_cluster_prefix_url: https://github.com/sonofspike
   # default_storage_class: "ocs-storagecluster-ceph-rbd"
   default_storage_class: "ocs-external-storagecluster-ceph-rbd"
