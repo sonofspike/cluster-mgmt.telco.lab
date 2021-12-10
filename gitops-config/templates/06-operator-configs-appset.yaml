@@ -36,12 +36,12 @@ spec:
 #          allowEmpty: true
 #        syncOptions:
           # (equivalent to 'kubectl apply --validate=false')
-          - Validate=false
-          - CreateNamespace=true
+#          - Validate=false
+#          - CreateNamespace=true
           # Supported policies are background, foreground and orphan.
-          - PrunePropagationPolicy=foreground
+#          - PrunePropagationPolicy=foreground
           # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
-          - PruneLast=true
+#          - PruneLast=true
 #        retry:
           # unlimited if less than 0
 #          limit: -1
