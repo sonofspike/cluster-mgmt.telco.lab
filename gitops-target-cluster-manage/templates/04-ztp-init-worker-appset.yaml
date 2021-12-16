@@ -1,0 +1,32 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+ name: {{ $.Values.global.name }}-{{ $.Values.gitops.namespace }}-ztp-init-worker
+ namespace: {{ $.Values.gitops.namespace }}
+spec:
+  generators:
+    - git:
+        repoURL: '{{ $.Values.global.values_cluster_prefix_url }}/{{ $.Values.global.cluster_git_prefix }}-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}.git'
+        directories:
+          - path: workers/*
+        revision: HEAD
+  template:
+    metadata:
+      name: 'ztp-init-worker-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}-{{ "{{" }}path.basename{{ "}}" }}'
+      namespace: {{ $.Values.gitops.namespace }}
+    spec:
+      destination:
+        namespace: {{ $.Values.gitops.namespace }}
+        server: 'https://kubernetes.default.svc'
+      project: default
+      source:
+        repoURL: '{{ $.Values.global.base_git_url }}'
+        path: gitops-deploy-worker
+        targetRevision: HEAD
+        helm:
+          valueFiles:
+          - "{{ $.Values.global.values_global_url }}/values.yaml"
+          - "{{ $.Values.global.values_cluster_prefix_url }}/{{ $.Values.global.cluster_git_prefix }}-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}/raw/main/values.yaml"
+          - "{{ $.Values.global.values_cluster_prefix_url }}/{{ $.Values.global.cluster_git_prefix }}-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}/raw/main/{{ "{{" }}path{{ "}}" }}/values.yaml"
+# https://raw.githubusercontent.com/sonofspike/cluster-ran1.telco.lab/main/workers/w100/values.yaml

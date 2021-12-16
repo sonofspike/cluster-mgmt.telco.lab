@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'ztp-deploy-worker-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}-{{ $.Values.node.name }}'
+  namespace: {{ $.Values.gitops.namespace }}
+spec:
+  destination:
+    namespace: {{ $.Values.gitops.namespace }}
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    repoURL: '{{ $.Values.global.base_git_url }}'
+    path: bp-profiles/{{ $.Values.node.technology }}/{{ $.Values.node.net_function }}/deploy
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - "{{ $.Values.global.values_global_url }}/values.yaml"
+      - "{{ $.Values.global.values_cluster_prefix_url }}/{{ $.Values.global.cluster_git_prefix }}-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}/raw/main/values.yaml"
+      - "{{ $.Values.global.values_cluster_prefix_url }}/{{ $.Values.global.cluster_git_prefix }}-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}/raw/main/workers/{{ $.Values.node.name }}/values.yaml"
+# https://raw.githubusercontent.com/sonofspike/cluster-ran1.telco.lab/main/workers/w100/values.yaml
