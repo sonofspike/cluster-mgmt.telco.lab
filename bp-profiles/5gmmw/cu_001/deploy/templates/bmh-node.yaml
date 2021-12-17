@@ -18,10 +18,11 @@ spec:
   {{- end }}
 {{- end }}
   automatedCleaningMode: disabled
-  # hardwareProfile: libvirt # Depricated
-  rootDeviceHints: 
-    deviceName: {{ $.Values.node.boot_dev_hint }}
-    rotational: {{ $.Values.node.boot_spinner_hint }}
+  # Depricated
+  hardwareProfile: libvirt
+  #rootDeviceHints: 
+  #  deviceName: {{ $.Values.node.boot_dev_hint }}
+  #  rotational: {{ $.Values.node.boot_spinner_hint }}
   bmc:
   #logic to detect vendor and set URL
     address: {{ $.Values.node.bmc_address }}
