@@ -19,10 +19,10 @@ spec:
 {{- end }}
   automatedCleaningMode: disabled
   # Depricated
-  #hardwareProfile: unknown
-  rootDeviceHints: 
-    deviceName: {{ $.Values.node.boot_dev_hint }}
-    rotational: {{ $.Values.node.boot_spinner_hint }}
+  hardwareProfile: unknown
+  #rootDeviceHints: 
+  #  deviceName: {{ $.Values.node.boot_dev_hint }}
+  #  rotational: {{ $.Values.node.boot_spinner_hint }}
   bmc:
     address: {{ $.Values.node.bmc_address }}
     credentialsName: bmc-{{ $.Values.cluster.name }}-{{ $.Values.node.site }}-{{ $.Values.node.name }}
