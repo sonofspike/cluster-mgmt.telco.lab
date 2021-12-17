@@ -19,7 +19,7 @@ spec:
 {{- end }}
   automatedCleaningMode: disabled
   # Depricated
-  hardwareProfile: libvirt
+  hardwareProfile: unknown
   #rootDeviceHints: 
   #  deviceName: {{ $.Values.node.boot_dev_hint }}
   #  rotational: {{ $.Values.node.boot_spinner_hint }}
