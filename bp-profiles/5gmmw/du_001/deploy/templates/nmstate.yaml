@@ -85,7 +85,7 @@ spec:
           next-hop-address: {{ $.Values.cluster.default_router }}
 {{- if eq (toString $.Values.node.bond_enable) "true" }}
           next-hop-interface: {{ $.Values.node.bond_name }}
-{- else }
+{{- else }}
   {{- range $index, $int := $.Values.node.interfaces }}
     {{- if eq $index 0 }}  
           next-hop-interface: {{ $int.name }}
