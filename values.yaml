@@ -5,7 +5,6 @@ global:
   cluster_git_prefix: cluster
   namespace: assisted-installer
   base_git_url: https://github.com/sonofspike/cluster-mgmt.telco.lab.git
-  operator_catalog_name: redhat-operator-index
 #
   values_global_url: https://raw.githubusercontent.com/sonofspike/cluster-mgmt.telco.lab/main
 #

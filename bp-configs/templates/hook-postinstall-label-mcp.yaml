@@ -1,0 +1,34 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    helm.sh/hook: post-install
+    helm.sh/hook-delete-policy: hook-succeeded
+    #helm.sh/hook-weight: "-5"
+  name: postinstall-{{ $.Values.global.name }}-label-mcp-job
+  namespace: {{ $.Values.gitops.namespace }}
+spec:
+  template:
+    spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      serviceAccount: cli-job-sa
+      serviceAccountName: cli-job-sa
+      terminationGracePeriodSeconds: 30
+      containers:
+        - image: {{ $.Values.gitops.hook_image }}
+          imagePullPolicy: IfNotPresent
+          name: {{ $.Values.global.name }}-label-mcp-job
+          env:
+            - name: SLEEP
+              value: "3"
+          command:
+            - /bin/bash
+            - -c
+            - |
+              echo "PostInstall Hook to label MCPs for 500 pods"
+              oc label machineconfigpool master custom-kubelet=max-pods-500
+              oc label machineconfigpool worker custom-kubelet=max-pods-500
+              echo "All done! Hooray!"
+              sleep $SLEEP
