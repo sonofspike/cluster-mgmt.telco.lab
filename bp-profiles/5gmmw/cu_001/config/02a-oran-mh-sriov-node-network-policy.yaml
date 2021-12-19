@@ -8,7 +8,7 @@ metadata:
   name: oran-mh-netdevice
   namespace: openshift-sriov-network-operator
 spec:
-  resourceName: oran_mh_netdevice
+  resourceName: oran_mh_netdevice_cu
   nodeSelector:
     ran.openshift.io/sriov: ""
     ran.openshift.io/oran-mh-netdevice: ""
@@ -31,7 +31,7 @@ metadata:
   name: oran-mh-vfio
   namespace: openshift-sriov-network-operator
 spec:
-  resourceName: oran_mh_vfio
+  resourceName: oran_mh_vfio_cu
   nodeSelector:
     ran.openshift.io/sriov: ""
     ran.openshift.io/oran-mh-vfio: ""
