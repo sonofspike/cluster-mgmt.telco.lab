@@ -10,7 +10,8 @@ metadata:
   name: oran-mh-du
   namespace: openshift-sriov-network-operator
 spec:
-  resourceName: oran_mh_netdevice
+  # resourceName: oran_mh_netdevice
+  resourceName: oran_fh_netdevice
   # Namespace with the DU workload
   networkNamespace: cnf-du
   vlan: 601
