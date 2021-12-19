@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
- name: {{ $.Values.global.name }}-{{ $.Values.gitops.namespace }}-ztp-init-worker
+ name: {{ $.Values.global.name }}-{{ $.Values.gitops.namespace }}-{{ $.Values.cluster.name }}.{{ $.Values.global.domain }}-ztp-init-worker
  namespace: {{ $.Values.gitops.namespace }}
 spec:
   generators:
