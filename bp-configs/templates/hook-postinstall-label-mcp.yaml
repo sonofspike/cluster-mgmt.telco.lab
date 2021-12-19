@@ -31,4 +31,5 @@ spec:
               oc label machineconfigpool master custom-kubelet=max-pods-500
               oc label machineconfigpool worker custom-kubelet=max-pods-500
               echo "All done! Hooray!"
+              sleep 120
               sleep $SLEEP
