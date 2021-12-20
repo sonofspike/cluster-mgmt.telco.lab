@@ -1,7 +1,7 @@
 apiVersion: metal3.io/v1alpha1
 kind: BareMetalHost
 metadata:
-  name: {{ $.Values.cluster.name }}-{{ $.Values.node.site }}-{{ $.Values.node.name }}-{{ $.Values.cluster.name }}
+  name: bmh-{{ $.Values.cluster.name }}-{{ $.Values.node.site }}-{{ $.Values.node.name }}
   namespace: {{ $.Values.global.namespace }}
   labels:
     # InfraEnv to use
