@@ -25,5 +25,5 @@ spec:
   # Modify source name of the catalogsource for air-gapped deployments
   source: redhat-operators
   channel: stable-3.6
-  installPlanApproval: Automatic
+  #installPlanApproval: Automatic
   name: quay-operator
