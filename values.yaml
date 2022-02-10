@@ -77,7 +77,8 @@ ai:
   registry_url: "lab-registry.mgmt.telco.lab"
   registry_user: "telcolab"
   registry_password: "Redhat01"
-  controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:525e8090f4c12107e6c89b8bae9461098a7d14132d2eebe4c39602348e4293c0"
+  controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:2069a60d41ed9bd62a7b0a54f90ca130120cfeb845e541f1f9e4eb2d4461466c"
+  #controller_image: "quay.io/edge-infrastructure/assisted-installer-controller@sha256:525e8090f4c12107e6c89b8bae9461098a7d14132d2eebe4c39602348e4293c0"
   os_images:
     osp_version: '4.8'
     rhcos_version: 48.84.202107202156-0
