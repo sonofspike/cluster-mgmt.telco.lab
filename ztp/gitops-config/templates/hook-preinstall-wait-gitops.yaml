@@ -4,7 +4,7 @@ kind: Job
 metadata:
   annotations:
   annotations:
-    helm.sh/hook: post-install
+    helm.sh/hook: pre-install
     helm.sh/hook-delete-policy: hook-succeeded
     #helm.sh/hook-weight: "-5"
   name: preinstall-{{ $.Values.global.name }}-wait-argocd-job
